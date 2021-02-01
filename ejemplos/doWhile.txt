@@ -1,0 +1,7 @@
+void prueba(){
+    int ast;
+    ast=5;
+    do{
+        int car;
+    }while(ast==3);
+}

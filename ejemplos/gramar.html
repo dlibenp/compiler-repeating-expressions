@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<style type="text/css">
+<!--
+.gramar {
+	font-family: "Courier New", Courier, monospace;
+	font-size: 12px;
+}
+.kyewords {
+	font-family: "Courier New", Courier, monospace;
+	font-size: 12px;
+	color: #0000FF;
+}
+-->
+</style>
+</head>
+
+<body>
+ <span class="gramar"><strong>Easy Gramar in Backus&ndash;Naur Form (BNF)</strong><br />
+ <br />
+ <strong>&lt;Proyecto&gt;</strong> --> </span><span class="kyewords"> void </span><span class="gramar"> id()<strong> &lt;body&gt;</strong><br /> 
+ <strong>&lt;body&gt;</strong> --> <strong>&lt;var&gt; &lt;lista_instrucciones&gt;</strong><br />
+ <strong>&lt;var&gt;</strong> --> </span><span class="kyewords"></span><span class="gramar"> <strong>&lt;variable&gt; &lt;  declarations&gt;</strong> </span><span class="kyewords"></span><span class="gramar"><br />
+<strong>&lt;variable&gt;</strong> --> id<br />
+ <strong>&lt;declaraciones&gt;</strong> --> [<strong>&lt;declaration&gt; &lt;declaraciones&gt;</strong>]<br />
+ <strong>&lt;declaration&gt;</strong> --> <strong>&lt;type&gt;</strong><strong>&lt;variables &gt;</strong>;<br />
+ <strong>&lt;type&gt;</strong> --> </span><span class="kyewords">int</span><span class="gramar"> | </span><span class="kyewords">float</span><span class="gramar"> | <span class="kyewords">bool</span><br />
+ <strong>&lt;variables&gt;</strong> --> id <strong>&lt;others_variables&gt;</strong><br />
+ <strong>&lt;others_variables&gt;</strong> --> [, <strong>&lt;variables&gt;</strong>]<br />
+ <strong>&lt;instruction_list&gt;</strong> --> [<strong>&lt;single_instruction&gt; &lt;instruction_list&gt;</strong>]<br />
+ <strong>&lt;single_instruction&gt;</strong> --><strong> &lt;read&gt;</strong> | <strong>&lt;write&gt;</strong> | <strong>&lt;asigment&gt;</strong> | <strong>&lt;if&gt;</strong> | <strong>&lt;while&gt;</strong> | <strong>&lt;do_while&gt;</strong> | <strong>&lt;for&gt;</strong> |; <br />
+ <strong>&lt;read&gt;</strong> --> </span><span class="kyewords">read</span><span class="gramar"> id;<br />
+ <strong>&lt;write&gt;</strong> --> </span><span class="kyewords">write</span><span class="gramar"> <strong>&lt;expression&gt;</strong>;<br />
+ <strong>&lt;asigment&gt;</strong> --> id = <strong>&lt;expression&gt;</strong>;<br />
+ <strong>&lt;expression&gt;</strong> --> <strong>&lt;single_expression&gt; &lt;others_singles_expressions&gt;</strong><br />
+ <strong>&lt;others_singles_expressions&gt;</strong> --> [<strong>&lt;operators_level_0&gt; &lt;single_expression&gt; &lt;others_singles_expressions&gt;</strong>]<br />
+ <strong>&lt;operators_level_0&gt;</strong> --> &gt; | &lt; | &gt;= | &lt;= | != | ==<br />
+ <strong>&lt;single_expression&gt;</strong> --> <strong>&lt;term&gt; &lt;others_terms&gt;</strong><br />
+ <strong>&lt;others_terms&gt;</strong> --> [<strong>&lt;operators_level_1&gt; &lt;term&gt; &lt;others_terms&gt;</strong>]<br />
+ <strong>&lt;operators_level_1&gt;</strong> --> + | - | &quot;||&quot;<br />
+ <strong>&lt;term&gt;</strong> --> <strong>&lt;factor&gt; &lt;others_factors&gt;</strong><br />
+ <strong>&lt;others_factors&gt;</strong> --> [<strong>&lt;operators_level_2&gt; &lt;factor&gt; &lt;others_factors&gt;</strong>]<br />
+ <strong>&lt;operators_level_2&gt;</strong> --> * | / | % | &amp;&amp;<br />
+ <strong>&lt;factor&gt;</strong> --> <strong>int_literal</strong> | <strong>float_literal</strong> | <strong>&lt;bool_literal&gt;</strong> | <strong>id</strong> | <strong>! &lt;factor&gt;</strong> | <strong>&lt;sign&gt;</strong> <strong>&lt;factor&gt;</strong> | <strong>&lt;exprecion&gt;</strong><br />
+ <strong>&lt;int_literal&gt;</strong> --> </span><span class="kyewords">int</span><span class="gramar"> <br />
+ <strong>&lt;float_literal&gt;</strong> --> </span><span class="kyewords">float</span><span class="gramar"> <br />
+ <strong>&lt;bool_literal&gt;</strong> --> </span><span class="kyewords">true</span><span class="gramar"> | </span><span class="kyewords">false</span><span class="gramar"><br />
+ <strong>&lt;sign&gt;</strong> --> + | -<br />
+ <strong>&lt;if&gt;</strong> --> </span><span class="kyewords">if</span><span class="gramar"> <strong>&lt;expression&gt;</strong> </span><span class="kyewords"></span><span class="kyewords"></span><span class="gramar"><strong>&lt;instructions&gt;</strong><span class="kyewords"></span>[</span><span class="kyewords">else</span><span class="gramar"> <strong>&lt;instructions&gt;</strong>]<br />
+ <strong>&lt;instructions&gt;</strong> --> <strong>&lt;blocke_instructions&gt; </strong>| <strong>&lt;single_instruction&gt;</strong><br />
+ <strong>&lt;while&gt; </strong> --> </span><span class="kyewords">while</span><span class="gramar"> <strong>&lt;expression&gt;</strong> </span><span class="gramar"> <strong>&lt;instructions&gt;</strong><br /></span>
+ <strong>&lt;do_while&gt; </strong> --> </span><span class="kyewords">do</span><span class="gramar"> <strong>&lt;instructions&gt;</strong> </span><span class="gramar"> <strong>&lt;expretion&gt;</strong><br /></span>
+ <strong>&lt;for&gt; </strong> --> </span></span><span class="gramar"> <strong>&lt;expression&gt;</strong> </span><span class="gramar"> <strong>&lt;instruction&gt;</strong><br /></span>
+
+</body>
+</html>

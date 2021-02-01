@@ -1,0 +1,36 @@
+/* Easy Gramar in Backus–Naur Form (BNF)
+     * <Proyecto> --> void id() <body>
+     * <body> --> { <var> <lista_instrucciones> }
+     *<var> --> [<variable> <declarations>]
+     *<variable>-->id
+     *<declarations> --> [<declaration> <declarations>]
+     *<declaration> --> <type> <variables> ;
+     *<type> --> int | float | bool
+     *<variables> --> id <others_variables>
+     *<others_variables> --> [, <variables>]
+     *<instructions_list> --> [<single_instruction><instructions_list>]
+     *<single_instruction> --> <read> | <write> | <assignment> | <if> | <while> |<do_while>|<for> ; 
+     *<read> --> read id;
+     *<write> --> write <expression>;
+     *<assignment> --> id = <expression>;
+     *<expression> --><single_expression><others_singles_expressions>
+     *<others_singles_expressions> -->[<operators_level_0><single_expression><others_singles_expressions>]
+     *<operators_level_0> ::= > | < | >= | <= | != | ==
+     *<single_expression> --> <term> <others_terms>
+     *<others_terms> --> [<operators_level_1> <term><others_terms>]
+     *<operators_level_1> ::= + | - | "||"
+     *<term> --> <factor> <others_factors>
+     *<others_factors> --> [<operators_level_2> <factor> <others_factors>]
+     *<operators_level_2> ::= * | / | % | &&
+     *<factor> --> int_literal | float_literal | <bool_literal> | id | ! <factor> | <sign> <factor> | (<expression>)
+     *<int_literal>--> int
+     *<float_literal>-->float
+     *<bool_literal> --> true | false
+     *<sign> --> + | -
+     *<if> --> if <expression> then <instructions>[else <instructions>]
+     *<instructions> --> <instructions_block> | <single_instruction>
+     *<while> --> while <expression> do <instructions>
+     *<do_while> --> do <instructions>while <expression>
+     *for-->for (<expression>)do <instruction>
+     *<instructions_block> --> begin <instructions_list> end
+     */

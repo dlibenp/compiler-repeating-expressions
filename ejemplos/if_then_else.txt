@@ -1,0 +1,7 @@
+void prueba(){
+    int ast;
+    ast=5;
+    if(ast==3)
+    then ast=7;
+    else ast=2;
+}
